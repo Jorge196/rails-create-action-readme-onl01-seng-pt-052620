@@ -93,3 +93,14 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 22ms (Views: 13.9ms | ActiveRecord: 1.3ms)
 
 
+Started POST "/posts" for 173.2.184.204 at 2020-10-08 20:24:16 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cljUBWsj3Mw5vH8/8cssMiRCuBoc+uiX/6gB0+BZS75FmcymCWlgWWacVJjp2x72EamfOdPOWcUQwfWGvQBU4Q==", "title"=>"bloop", "description"=>"blah blah", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "bloop"], ["description", "blah blah"], ["created_at", "2020-10-08 20:24:17.158262"], ["updated_at", "2020-10-08 20:24:17.158262"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 32ms (ActiveRecord: 3.1ms)
+
+
